@@ -52,48 +52,87 @@ namespace ConsoleApp2
             }
 
             Console.WriteLine("\n4. liczby parzyste");
+
+            int licznikParzyste = 0;
+            int licznikNieparzyste = 0;
+
             foreach (int liczba in liczby)
             {
-                bool parzysta = liczba % 2 == 0;
-                if (parzysta == true)
+                if (liczba % 2 == 0)
                 {
-                    Console.Write(liczba + ", ");
+                    licznikParzyste++;
+                }
+                else
+                {
+                    licznikNieparzyste++;
                 }
             }
 
-                //Console.WriteLine("Kopiowanie i modyfikacja tablicy");
-                //int[] A = { 1, 2, 3, 4 };
-                //int[] B = { };
-                //for (int i = 0; i<A.Length; i++)
-                //{
-                //    B = B + (A[i] * A[i]);
-                //}
+            Console.WriteLine("Liczb parzystych: " + {licznikParzyste});
+            Console.WriteLine("Liczb nieparzystych: " + {licznikNieparzyste});
+
+
+            Console.WriteLine("5. Kopiowanie i modyfikacja tablicy");
+            int[] liczby2 = new int[liczby.Length];
+
+            for (int i = 0; i < liczby.Length; i++)
+            {
+                liczby2[i] = liczby[i] * 2;
+                Console.Write(liczby2[i] + ", ");
+                break;
+
+            }
 
                 Console.WriteLine("\n6. Wyszukiwanie elementu popdanego przez uzytkownika");
                 Console.WriteLine("Witaj, podaj liczbe ktora twoim zdaniem znajduje sie w mojej tablicy: ");
                 int liczbaUzytkownika = int.Parse(Console.ReadLine());
                 bool czyZnaleziono = false;
-                int o = 0;
-                string odp = "Liczba " + liczbaUzytkownika + " nie została znaleziona w tablicy.";
-                while (o < liczby[o])
+
+                for (int i = 0; i < liczby.Length; i++)
                 {
-                    o++;
-                    if (liczbaUzytkownika == liczby[o])
+                    if (liczby[i] == szukana)
                     {
+                        Console.WriteLine("Liczba " + {szukana} + " znajduje się w tablicy na indeksie "+{i}+".");
                         czyZnaleziono = true;
-                        odp = "Liczba " + liczbaUzytkownika + " znajduje się w tablicy na indeksie " + o;
                         break;
-                    }
-                    else
-                    {
-                    continue;
-                    }
+                    } else {
+                        Console.WriteLine("Liczba " + {szukana} " nie została znaleziona w tablicy.");
 
+                    }
                 }
-                Console.WriteLine(odp);
 
 
+                Console.WriteLine("7. Odwracanie tablicy w miejscu (in-place)");
+                int[] maleLiczby = { 1, 2, 3, 4, 5 };
+                int[] noweMaleLiczby = new int[5];
+
+                int indeksNowych = 0; 
+
+                for (int i = maleLiczby.Length - 1; i >= 0; i--)
+                {
+                    noweMaleLiczby[indeksNowej] = maleLiczby[i];
+                    indeksNowej++; 
+                }
+
+                Console.WriteLine("Odwrócona: " + string.Join(", ", noweMaleLiczby));
+
+
+                Console.WriteLine("8. Praca z tablicą dwuwymiarową");
+                int[,] macierz = {
+                    { 1, 2, 3 },
+                    { 4, 5, 6 },
+                    { 7, 8, 9 }
+                };
+
+            int suma = macierz[0,0] + macierz[1,1] + macierz[2,2];
+
+            Console.WriteLine("Suma przekątnej: "+ {suma});
+
+
+            Console.WriteLine("9. Sortowanie");
+            Array.Sort(liczby); 
+            Console.WriteLine("Posortowane: " + string.Join(", ", liczby));
         }
-        }
+    }
     }
 
