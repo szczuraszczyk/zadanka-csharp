@@ -92,13 +92,14 @@ namespace ConsoleApp2
                 {
                     if (liczby[i] == szukana)
                     {
-                        Console.WriteLine("Liczba " + {szukana} + " znajduje się w tablicy na indeksie "+{i}+".");
+                        Console.WriteLine("Liczba " + szukana + " znajduje się w tablicy na indeksie " + i + ".");
                         czyZnaleziono = true;
                         break;
-                    } else {
-                        Console.WriteLine("Liczba " + {szukana} " nie została znaleziona w tablicy.");
-
                     }
+                } 
+                if (!czyZnaleziono)
+                {
+                    Console.WriteLine("Liczba " + szukana + " nie została znaleziona w tablicy!");
                 }
 
 
