@@ -117,14 +117,17 @@ namespace ConsoleApp2
 
                 Console.WriteLine("8. Praca z tablicą dwuwymiarową");
                 int[,] macierz = {
-                    { 1, 2, 3 },
-                    { 4, 5, 6 },
-                    { 7, 8, 9 }
+                    { 11, 22, 33 },
+                    { 44, 55, 66 },
+                    { 77, 88, 99 }
                 };
 
-            int suma = macierz[0,0] + macierz[1,1] + macierz[2,2];
+            for (int i = 0; i < 3; i++) //zmień pls
+            {
+                int sumaPrzekatnej += macierz[i, i];
+            }
 
-            Console.WriteLine("Suma przekątnej: "+ {suma});
+            Console.WriteLine("Suma przekątnej: "+ sumaPrzekatnej);
 
 
             Console.WriteLine("9. Sortowanie");
