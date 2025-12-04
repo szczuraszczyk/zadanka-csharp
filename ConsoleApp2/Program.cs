@@ -133,6 +133,33 @@ namespace ConsoleApp2
             Console.WriteLine("9. Sortowanie");
             Array.Sort(liczby); 
             Console.WriteLine("Posortowane: " + string.Join(", ", liczby));
+
+
+            Console.WriteLine("10. idk");
+            int[] liczby = { 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 5 };
+
+
+
+            Console.WriteLine("11. tulipan");
+            string[] tablicaLiter = {"o", "p", "p", "a"};
+
+            bool czyTulipan = true;
+
+            for (int i = 0; i < tablica.Length / 2; i++)
+            {
+                if (tablica[i] != tablica[tablica.Length - 1 - i])
+                {
+                    jestPalindromem = false;
+                    break;
+                }
+            }
+            if (jestPalindromem)
+            {
+                Console.WriteLine("Tablica jest palindromem.");
+            } else
+                Console.WriteLine("Tablica nie jest palindromem.");
+            }
+
         }
     }
     }
