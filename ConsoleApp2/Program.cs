@@ -105,17 +105,14 @@ namespace ConsoleApp2
 
                 Console.WriteLine("7. Odwracanie tablicy w miejscu (in-place)");
                 int[] maleLiczby = { 1, 2, 3, 4, 5 };
-                int[] noweMaleLiczby = new int[5];
 
-                int indeksNowych = 0; 
-
-                for (int i = maleLiczby.Length - 1; i >= 0; i--)
+                for (int i = 0; i < maleLiczby.Length / 2; i++)
                 {
-                    noweMaleLiczby[indeksNowej] = maleLiczby[i];
-                    indeksNowej++; 
+                    int tymczasowa = maleLiczby[i];
+                    maleLiczby[i] = maleLiczby[maleLiczby.Length - 1 - i];
+                    maleLiczby[maleLiczby.Length -1 -i] = tymczasowa;
                 }
-
-                Console.WriteLine("Odwrócona: " + string.Join(", ", noweMaleLiczby));
+                Console.WriteLine("Odwrócona: " + string.Join(", ", maleLiczby));
 
 
                 Console.WriteLine("8. Praca z tablicą dwuwymiarową");
