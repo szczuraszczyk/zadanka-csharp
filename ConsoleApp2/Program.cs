@@ -68,8 +68,8 @@ namespace ConsoleApp2
                 }
             }
 
-            Console.WriteLine("Liczb parzystych: " + {licznikParzyste});
-            Console.WriteLine("Liczb nieparzystych: " + {licznikNieparzyste});
+            Console.WriteLine("Liczb parzystych: " + licznikParzyste);
+            Console.WriteLine("Liczb nieparzystych: " + licznikNieparzyste);
 
 
             Console.WriteLine("5. Kopiowanie i modyfikacja tablicy");
@@ -79,13 +79,12 @@ namespace ConsoleApp2
             {
                 liczby2[i] = liczby[i] * 2;
                 Console.Write(liczby2[i] + ", ");
-                break;
 
             }
 
                 Console.WriteLine("\n6. Wyszukiwanie elementu popdanego przez uzytkownika");
                 Console.WriteLine("Witaj, podaj liczbe ktora twoim zdaniem znajduje sie w mojej tablicy: ");
-                int liczbaUzytkownika = int.Parse(Console.ReadLine());
+                int szukana = int.Parse(Console.ReadLine());
                 bool czyZnaleziono = false;
 
                 for (int i = 0; i < liczby.Length; i++)
@@ -121,22 +120,22 @@ namespace ConsoleApp2
                     { 44, 55, 66 },
                     { 77, 88, 99 }
                 };
+            int sumaPrzekatnej = 0;
 
-            for (int i = 0; i < 3; i++) //zmień pls
+            for (int i = 0; i < macierz.GetLength(0); i++) 
             {
-                int sumaPrzekatnej += macierz[i, i];
+                sumaPrzekatnej += macierz[i, i];
             }
 
             Console.WriteLine("Suma przekątnej: "+ sumaPrzekatnej);
 
 
-            Console.WriteLine("9. Sortowanie");
-            Array.Sort(liczby); 
-            Console.WriteLine("Posortowane: " + string.Join(", ", liczby));
+            Console.WriteLine("9. Sortowanie"); 
+            
 
 
             Console.WriteLine("10. idk");
-            int[] liczby = { 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 5 };
+            int[] liczbyy = { 1, 1, 1, 1, 2, 2, 3, 4, 4, 4, 5 };
 
 
 
@@ -145,15 +144,15 @@ namespace ConsoleApp2
 
             bool czyTulipan = true;
 
-            for (int i = 0; i < tablica.Length / 2; i++)
+            for (int i = 0; i < tablicaLiter.Length / 2; i++)
             {
-                if (tablica[i] != tablica[tablica.Length - 1 - i])
+                if (tablicaLiter[i] != tablicaLiter[tablicaLiter.Length - 1 - i])
                 {
-                    jestPalindromem = false;
+                    czyTulipan = false;
                     break;
                 }
             }
-            if (jestPalindromem)
+            if (!czyTulipan)
             {
                 Console.WriteLine("Tablica jest palindromem.");
             } else
@@ -162,5 +161,5 @@ namespace ConsoleApp2
 
         }
     }
-    }
+    
 
